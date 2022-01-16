@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>jsMind</title>
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsmind@0.4.6/style/jsmind.css"/>
+    <style type="text/css">
+        #jsmind_container {
+            width: 1920px;
+            height: 1080px;
+            border: solid 1px #ccc;
+            /*background:#f4f4f4;*/
+            background: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+<div id="jsmind_container"></div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jsmind@0.4.6/js/jsmind.min.js"></script>
+<script type="text/javascript">
+    function load_jsmind() {
+        var mind = {
+            meta: {
+                name: "mind-map",
+                author: "m.antipov@outlook.com",
+                version: "1.0",
+            },
+            format: "node_array",
+            data: [
+                {id: "root", isroot: true, topic: "Модели распределённых приложений на облачной платформе"},
+
+                {id: "РАСПРЕДЕЛЕННЫЕ_ВЫЧИСЛЕНИЯ", parentid: "root", topic: "РАСПРЕДЕЛЕННЫЕ_ВЫЧИСЛЕНИЯ"},
+                {id: "ОБЛАКО", parentid: "РАСПРЕДЕЛЕННЫЕ_ВЫЧИСЛЕНИЯ", topic: "ОБЛАКО"},
+                {id: "ТУМАННЫЕ_ВЫЧИСЛЕНИЯ", parentid: "РАСПРЕДЕЛЕННЫЕ_ВЫЧИСЛЕНИЯ", topic: "ТУМАННЫЕ_ВЫЧИСЛЕНИЯ"},
+                {id: "РАСПРЕДЕЛЕННАЯ_СИСТЕМА", parentid: "РАСПРЕДЕЛЕННЫЕ_ВЫЧИСЛЕНИЯ", topic: "РАСПРЕДЕЛЕННАЯ_СИСТЕМА"},
+                {id: "SOA", parentid: "РАСПРЕДЕЛЕННАЯ_СИСТЕМА", topic: "SOA"},
+                {id: "ОТКАЗОУСТОЙЧИВОСТЬ", parentid: "РАСПРЕДЕЛЕННАЯ_СИСТЕМА", topic: "ОТКАЗОУСТОЙЧИВОСТЬ"},
+                {id: "МАСШТАБИРУЕМОСТЬ", parentid: "РАСПРЕДЕЛЕННАЯ_СИСТЕМА", topic: "МАСШТАБИРУЕМОСТЬ"},
+                {id: "ОБЛАЧНАЯ_ПЛАТФОРМА", parentid: "РАСПРЕДЕЛЕННЫЕ_ВЫЧИСЛЕНИЯ", topic: "ОБЛАЧНАЯ_ПЛАТФОРМА"},
+                {id: "МУЛЬТИРЕГИОНАЛЬНАЯ_ИНФОРМАЦИОННАЯ_СИСТЕМА", parentid: "ОБЛАЧНАЯ_ПЛАТФОРМА", topic: "МУЛЬТИРЕГИОНАЛЬНАЯ_ИНФОРМАЦИОННАЯ_СИСТЕМА"},
+                {id: "БЕССЕРВЕРНЫЕ_ВЫЧИСЛЕНИЯ", parentid: "ОБЛАЧНАЯ_ПЛАТФОРМА", topic: "БЕССЕРВЕРНЫЕ_ВЫЧИСЛЕНИЯ"},
+                {id: "IAAS", parentid: "ОБЛАЧНАЯ_ПЛАТФОРМА", topic: "IAAS"},
+                {id: "PAAS", parentid: "ОБЛАЧНАЯ_ПЛАТФОРМА", topic: "PAAS"},
+                {id: "SAAS", parentid: "ОБЛАЧНАЯ_ПЛАТФОРМА", topic: "SAAS"},
+                {id: "FAAS", parentid: "ОБЛАЧНАЯ_ПЛАТФОРМА", topic: "FAAS"},
+                {id: "DBAAS", parentid: "ОБЛАЧНАЯ_ПЛАТФОРМА", topic: "DBAAS"},
+                {id: "МУЛЬТИОБЛАЧНАЯ_ИНФОРМАЦИОННАЯ_СИСТЕМА", parentid: "ОБЛАЧНАЯ_ПЛАТФОРМА", topic: "МУЛЬТИОБЛАЧНАЯ_ИНФОРМАЦИОННАЯ_СИСТЕМА"},
+                {id: "ACTIVE-ACTIVE_АРХИТЕКТУРА", parentid: "МУЛЬТИРЕГИОНАЛЬНАЯ_ИНФОРМАЦИОННАЯ_СИСТЕМА", topic: "ACTIVE-ACTIVE_АРХИТЕКТУРА"},
+                {id: "ВИРУТАЛЬНАЯ_МАШИНА", parentid: "root", topic: "ВИРУТАЛЬНАЯ_МАШИНА"},
+                {id: "ВЫЧИСЛИТЕЛЬНЫЕ_РЕСУРСЫ", parentid: "root", topic: "ВЫЧИСЛИТЕЛЬНЫЕ_РЕСУРСЫ"}
+            ]
+        };
+        var options = {
+            container: 'jsmind_container',
+            editable: true,
+            theme: 'primary'
+        }
+        var jm = jsMind.show(options, mind);
+    }
+
+    load_jsmind();
+</script>
+</body>
+</html>
